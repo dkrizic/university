@@ -5,5 +5,5 @@
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>university</name>
-  <description>Main project of huge university Maven multi project</description>
+  <description>The Main project of huge university Maven multi project</description>
 </project>
