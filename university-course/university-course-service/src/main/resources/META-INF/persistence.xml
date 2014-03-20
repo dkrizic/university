@@ -3,6 +3,6 @@
 	version="1.0">
 	<persistence-unit name="university">
 		<description>example of enabling the second level cache.</description>
-		<jta-data-source>java:jboss/datasources/ExampleDS</jta-data-source>
+		<jta-data-source>java:jboss/datasources/UniversityDS</jta-data-source>
 	</persistence-unit>
 </persistence>
