@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://java.sun.com/xml/ns/persistence"
-	version="1.0">
-	<persistence-unit name="university">
-		<description>example of enabling the second level cache.</description>
-		<jta-data-source>java:jboss/datasources/UniversityDS</jta-data-source>
-	</persistence-unit>
+             version="1.0">
+    <persistence-unit name="university">
+        <description>example of enabling the second level cache.</description>
+        <jta-data-source>java:jboss/datasources/UniversityDS</jta-data-source>
+        <class>com.prodyna.pac.university.course.Course</class>
+    </persistence-unit>
 </persistence>
