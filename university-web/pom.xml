@@ -9,12 +9,19 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>university-common</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module/>
-        <module>university-common-service</module>
-    </modules>
+    <artifactId>university-web</artifactId>
+    <packaging>war</packaging>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -14,6 +14,7 @@
 		<module>university-test</module>
         <module>university-common</module>
         <module>university-pom-service</module>
+        <module>university-web</module>
     </modules>
 	<dependencies>
 		<dependency>
