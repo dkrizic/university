@@ -29,9 +29,9 @@ public class CourseTest {
     public static WebArchive createDeployment() {
     	WebArchive wa = ShrinkWrap.create( WebArchive.class, "test.war");
     	wa.addPackages( true,  "com.prodyna.pac.university");
-    	wa.addAsResource( "persistence.xml", "META-INF/persistence.xml");
-        wa.addAsResource( "META-INF/beans.xml" );
-    	System.out.println( wa.toString( true ) );
+    	wa.addAsResource("META-INF/persistence.xml");
+        wa.addAsResource("META-INF/beans.xml");
+    	System.out.println(wa.toString(true));
     	return wa;
     }
 
