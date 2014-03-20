@@ -12,7 +12,9 @@
 		<module>university-ear</module>
 		<module>university-student</module>
 		<module>university-test</module>
-	</modules>
+        <module>university-common</module>
+        <module>university-pom-service</module>
+    </modules>
 	<dependencies>
 		<dependency>
 			<groupId>org.jboss.spec</groupId>

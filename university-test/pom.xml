@@ -7,6 +7,12 @@
   </parent>
   <artifactId>university-test</artifactId>
   <dependencies>
+      <dependency>
+          <groupId>com.prodyna.pac.university</groupId>
+          <artifactId>university-common-service</artifactId>
+          <version>0.0.1-SNAPSHOT</version>
+          <type>ejb</type>
+      </dependency>
   	<dependency>
   		<groupId>com.prodyna.pac.university</groupId>
   		<artifactId>university-course-service</artifactId>

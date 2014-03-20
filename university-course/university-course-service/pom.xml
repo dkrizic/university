@@ -16,6 +16,11 @@
 			<type>pom</type>
 			<scope>provided</scope>
 		</dependency>
+        <dependency>
+            <groupId>com.prodyna.pac.university</groupId>
+            <artifactId>university-common-service</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 		<dependency>
 			<groupId>com.prodyna.pac.university</groupId>
 			<artifactId>university-course-client</artifactId>

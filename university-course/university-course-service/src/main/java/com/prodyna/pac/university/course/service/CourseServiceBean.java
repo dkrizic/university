@@ -3,14 +3,19 @@ package com.prodyna.pac.university.course.service;
 import java.util.List;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import com.prodyna.pac.university.course.Course;
 import com.prodyna.pac.university.course.CourseService;
+import org.slf4j.Logger;
 
 @Stateless
 public class CourseServiceBean implements CourseService {
+
+    @Inject
+    private Logger log;
 
 	@PersistenceContext
 	private EntityManager em;
@@ -18,6 +23,7 @@ public class CourseServiceBean implements CourseService {
 	@Override
 	public Course addCourse(Course c) {
 		em.persist(c);
+        log.info("Added " + c );
 		return c;
 	}
 

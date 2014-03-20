@@ -82,5 +82,13 @@ public class Course implements Serializable {
 		return true;
 	}
 
+    @Override
+    public String toString() {
+        return "Course{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                '}';
+    }
 }
 

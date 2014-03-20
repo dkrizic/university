@@ -12,11 +12,15 @@ import org.jboss.shrinkwrap.api.spec.WebArchive;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
 
 import java.util.List;
 
 @RunWith(Arquillian.class)
 public class CourseTest {
+
+    @Inject
+    private Logger log;
 
 	@Inject
 	private CourseService cs;
@@ -24,8 +28,9 @@ public class CourseTest {
     @Deployment
     public static WebArchive createDeployment() {
     	WebArchive wa = ShrinkWrap.create( WebArchive.class, "test.war");
-    	wa.addPackages( true,  "com.prodyna.pac.university.course");
+    	wa.addPackages( true,  "com.prodyna.pac.university");
     	wa.addAsResource( "persistence.xml", "META-INF/persistence.xml");
+        wa.addAsResource( "META-INF/beans.xml" );
     	System.out.println( wa.toString( true ) );
     	return wa;
     }
@@ -37,6 +42,7 @@ public class CourseTest {
         for( Course course : courses ) {
             cs.deleteCourse( course.getId() );
         }
+        log.info("Deleted " + courses.size() + " courses");
         assertEquals( 0, cs.readCourses().size() );
     }
 
